@@ -4,7 +4,6 @@ public class ActionConstants {
 
 	public static final String BTN_TXT_MAIN_MENU = "Main menu";
 	public static final String BTN_TXT_START = "/start";
-	public static final String BTN_TXT_TERMS = "Terms";
 	public static final String BTN_TXT_SETTINGS = "Settings";
 	public static final String BTN_TXT_LANGUAGE = "Language";
 	public static final String BTN_TXT_PROFILE = "Profile";
@@ -49,5 +48,11 @@ public class ActionConstants {
 	public static final String BTN_TXT_ADMIN_ITEM= "Item";
 	public static final String BTN_TXT_MAIN_ADMIN_MENU = "Admin menu";
 	
+	//For EOS
+	public static final String BTN_TXT_CHANGE_ACCOUNT = "Change account";
+	public static final String BTN_TXT_SHOW_BALANCE = "Show balance";
+	public static final String BTN_TXT_SHOW_TRANSACTIONS = "Show transactions";
+	public static final String BTN_TXT_GENERATE_KEY = "Generate new key";
+	public static final String BTN_TXT_TERMS = "Terms";
 
 }

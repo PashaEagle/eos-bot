@@ -15,6 +15,9 @@ public class BotProperties {
     
 	private String token;
 	private String username;
+	private String chatId;
+	private Integer prevAmount;
+	private Integer trxAmount;
 	
 	private Creator creator;
 	private Session session;

@@ -7,29 +7,33 @@ import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import io.crypto.beer.telegram.bot.Bot;
+import io.crypto.beer.telegram.bot.handler.keyboard.response.MainKeyboard;
 
-@Service(value = TermsAction.BEAN_NAME)
+@Service(value = ChangeAccountAction.BEAN_NAME)
 @Scope(value = BeanDefinition.SCOPE_PROTOTYPE)
-public class TermsAction extends BaseResponseAction {
+public class ChangeAccountAction extends BaseResponseAction {
 
-    public static final String BEAN_NAME = "termsAction";
+    public static final String BEAN_NAME = "changeAccountAction";
+    
+    private final Bot bot;
 
-    public TermsAction(ApplicationContext ctx, Bot bot) {
+    public ChangeAccountAction(ApplicationContext ctx, Bot bot) {
         super(ctx, bot);
+        this.bot = bot;
     }
 
     @Override
     protected void makeAction(Update update) {
+    	bot.getSession(update).getEditState().clickAccountName();
     }
 
     @Override
     protected String generateSendMessage(Update update) {
-        return "Terms\n\nThis bot can help you in using the EOS blockchain.\n\nIt can:\n - *Show your balance * \n - *Show your transactions* \n - *Generate new key* \n - *Notificate you on new transactions* - \n\n _Contact information:_ @PashaEagle\n";
+        return "Please, type new account name:";
     }
 
     @Override
     protected String getKeyboard(Update update) {
-        return null;
+        return MainKeyboard.BEAN_NAME;
     }
-
 }

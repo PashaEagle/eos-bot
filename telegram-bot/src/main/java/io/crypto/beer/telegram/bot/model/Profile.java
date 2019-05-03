@@ -31,4 +31,6 @@ public class Profile {
 
     private List<Address> addresses;
     
+    private String accountName;
+    
 }

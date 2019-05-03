@@ -15,7 +15,8 @@ public class MainKeyboard extends BaseReplyKeyboard {
 
     @Override
     public void fillMenuRows(Update update) {
-        fillFirstRow(ActionConstants.BTN_TXT_ORDER);
-        fillSecondRow(ActionConstants.BTN_TXT_SETTINGS, ActionConstants.BTN_TXT_TERMS);
+        fillFirstRow(ActionConstants.BTN_TXT_SHOW_BALANCE, ActionConstants.BTN_TXT_CHANGE_ACCOUNT);
+        fillSecondRow(ActionConstants.BTN_TXT_SHOW_TRANSACTIONS, ActionConstants.BTN_TXT_GENERATE_KEY);
+        fillThirdRow(ActionConstants.BTN_TXT_TERMS);
     }
 }

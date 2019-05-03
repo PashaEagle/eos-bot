@@ -20,11 +20,15 @@ import io.crypto.beer.telegram.bot.handler.action.callBack.cart.buyBeer.BuyBeerV
 import io.crypto.beer.telegram.bot.handler.action.callBack.cart.buyBeer.CartBuyBeerAction;
 import io.crypto.beer.telegram.bot.handler.action.callBack.cart.removeItem.CartRemoveAction;
 import io.crypto.beer.telegram.bot.handler.action.response.BackToMenuAction;
+import io.crypto.beer.telegram.bot.handler.action.response.ChangeAccountAction;
+import io.crypto.beer.telegram.bot.handler.action.response.GenerateKeyAction;
 import io.crypto.beer.telegram.bot.handler.action.response.LanguageAction;
 import io.crypto.beer.telegram.bot.handler.action.response.MainMenuAction;
 import io.crypto.beer.telegram.bot.handler.action.response.ProfileAction;
 import io.crypto.beer.telegram.bot.handler.action.response.ProfileEditAction;
 import io.crypto.beer.telegram.bot.handler.action.response.SettingsAction;
+import io.crypto.beer.telegram.bot.handler.action.response.ShowBalanceAction;
+import io.crypto.beer.telegram.bot.handler.action.response.ShowTransactionsAction;
 import io.crypto.beer.telegram.bot.handler.action.response.StartAction;
 import io.crypto.beer.telegram.bot.handler.action.response.TermsAction;
 import io.crypto.beer.telegram.bot.handler.action.response.address.AddressAction;
@@ -75,7 +79,6 @@ public class Config {
         keyMap.put(ActionConstants.BTN_TXT_MAIN_MENU, MainMenuAction.BEAN_NAME);
         keyMap.put(ActionConstants.BTN_TXT_START, StartAction.BEAN_NAME);
         keyMap.put(ActionConstants.BTN_TXT_ORDER, OrderAction.BEAN_NAME);
-        keyMap.put(ActionConstants.BTN_TXT_TERMS, TermsAction.BEAN_NAME);
         keyMap.put(ActionConstants.BTN_TXT_SETTINGS, SettingsAction.BEAN_NAME);
         keyMap.put(ActionConstants.BTN_TXT_LANGUAGE, LanguageAction.BEAN_NAME);
         keyMap.put(ActionConstants.BTN_TXT_PROFILE, ProfileAction.BEAN_NAME);
@@ -98,6 +101,16 @@ public class Config {
         keyMap.put(ActionConstants.BTN_TXT_ADMIN_ITEM, AdminItemAction.BEAN_NAME);
         keyMap.put(ActionConstants.BTN_TXT_MAIN_ADMIN_MENU, AdminMenuAction.BEAN_NAME);
 
+        
+        
+        //For EOS
+        keyMap.put(ActionConstants.BTN_TXT_CHANGE_ACCOUNT, ChangeAccountAction.BEAN_NAME);
+        keyMap.put(ActionConstants.BTN_TXT_SHOW_BALANCE, ShowBalanceAction.BEAN_NAME);
+        keyMap.put(ActionConstants.BTN_TXT_SHOW_TRANSACTIONS, ShowTransactionsAction.BEAN_NAME);
+        keyMap.put(ActionConstants.BTN_TXT_GENERATE_KEY, GenerateKeyAction.BEAN_NAME);
+        keyMap.put(ActionConstants.BTN_TXT_TERMS, TermsAction.BEAN_NAME);
+        
+        
         return keyMap;
     }
 

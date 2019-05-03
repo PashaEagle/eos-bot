@@ -2,6 +2,7 @@ package io.crypto.beer.telegram.bot.handler.action.response;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
@@ -10,6 +11,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.User;
 
 import io.crypto.beer.telegram.bot.Bot;
+import io.crypto.beer.telegram.bot.config.properties.BotProperties;
 import io.crypto.beer.telegram.bot.constants.KeyboardConstants;
 import io.crypto.beer.telegram.bot.handler.keyboard.response.MainKeyboard;
 import io.crypto.beer.telegram.bot.model.Address;
@@ -25,10 +27,13 @@ public class StartAction extends BaseResponseAction {
 
 	public static final String BEAN_NAME = "startAction";
 
+	@Autowired
+	private BotProperties botProperties;
 	private final AddressService addressService;
 	private final UserService service;
 	private final UserTransformer transformer;
 	private final Bot bot;
+	
 
 	public StartAction(ApplicationContext ctx, Bot bot, UserService service, UserTransformer transformer,
 			AddressService addressService) {
@@ -58,6 +63,8 @@ public class StartAction extends BaseResponseAction {
 		} else {
 			session.getProfile().setAddress(addresses.get(0));
 		}
+		
+		botProperties.setChatId(update.getMessage().getChatId().toString());
 	}
 
 	@Override

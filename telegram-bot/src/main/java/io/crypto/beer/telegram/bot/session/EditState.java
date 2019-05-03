@@ -11,6 +11,8 @@ public class EditState {
         cleanEditStates();
     }
     
+    private boolean accountName;
+    
     private boolean profileFullName;
     
     private boolean profilePhone;
@@ -22,6 +24,11 @@ public class EditState {
     private boolean addressStreet;
     
     private Integer numberOfAddress;
+    
+    public void clickAccountName() {
+        cleanEditStates();
+        this.accountName = true;
+    }
     
     public void clickProfileFullName() {
         cleanEditStates();
@@ -62,6 +69,7 @@ public class EditState {
         this.addressCountry = false;
         this.addressCity = false;
         this.addressStreet = false;
+        this.accountName = false;
     }
     
 }
