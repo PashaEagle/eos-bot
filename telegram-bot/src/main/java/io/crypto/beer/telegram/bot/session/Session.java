@@ -24,10 +24,6 @@ public class Session {
 
     private String fullPath;
 
-    private OrderState orderState;
-
-    private ShopData shopData;
-    
     private EditState editState;
 
     private Profile profile;

@@ -1,14 +1,11 @@
 package io.crypto.beer.telegram.bot.transformer;
 
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import io.crypto.beer.telegram.bot.integration.eos.dto.Action;
-import jdk.internal.jline.internal.Log;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @NoArgsConstructor(access = AccessLevel.PRIVATE)

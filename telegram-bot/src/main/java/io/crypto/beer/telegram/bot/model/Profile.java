@@ -26,10 +26,6 @@ public class Profile {
     private String referral;
     
     private String providedReferral;
-
-    private Address address;
-
-    private List<Address> addresses;
     
     private String accountName;
     
